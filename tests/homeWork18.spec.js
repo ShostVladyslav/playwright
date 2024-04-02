@@ -1,5 +1,5 @@
 import {expect, test} from '@playwright/test'
-test.describe('Sign UP', ()=>{  
+test.describe('check SignUP form', ()=>{  
     
     test.beforeEach(async ({page})=>{
         await page.goto("")
@@ -17,7 +17,7 @@ test.describe('Sign UP', ()=>{
             await expect(page).toHaveURL("")
         });
 
-        test("pop-up registration", async({page})=>{
+        test("user registration", async({page})=>{
             const popup = page.locator('app-signup-modal')
             const fildName = popup.locator('#signupName')
             const lastName = popup.locator('#signupLastName')
@@ -37,7 +37,7 @@ test.describe('Sign UP', ()=>{
     })
 
     test.describe('check registration fields', ()=>{
-        test("Field Name", async({page})=>{
+        test("field Name", async({page})=>{
             const popup = page.locator('app-signup-modal')
             const name = popup.locator('#signupName')
             const nameErrorMessage = popup.locator('#signupName + .invalid-feedback')
