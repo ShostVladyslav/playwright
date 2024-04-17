@@ -1,5 +1,5 @@
 import Header from '../pageObjects/GaragePage/Components/Header.js'
-import Main from './GaragePage/Components/Main.js'
+import Main from './HomePage/Components/Main.js'
 
 
 export default class BasePage {

@@ -1,0 +1,1 @@
+export const USER_SEMEN_STORAGE_STATE_PATH = './state/semen-state.json'
