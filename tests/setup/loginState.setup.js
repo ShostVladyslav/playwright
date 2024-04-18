@@ -8,10 +8,10 @@ setup.describe('Setup', ()=> {
     setup("Login and Save", async({page}) => {
         const homePage = new HomePage(page)
         await homePage.navigate()
-        const SignInPopup = await homePage.openSignInPopup()
-        await SignInPopup.emailInput.fill(USERS.Semen.email)
-        await SignInPopup.passwordInput.fill(USERS.Semen.password)
-        await SignInPopup.btnLogin.click()
+        const signInPopup = await homePage.openSignInPopup()
+        await signInPopup.emailInput.fill(USERS.Semen.email)
+        await signInPopup.passwordInput.fill(USERS.Semen.password)
+        await signInPopup.btnLogin.click()
 
         await expect(page).toHaveURL(/garage/)
 
