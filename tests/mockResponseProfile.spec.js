@@ -12,8 +12,9 @@ test.describe.only('Mock Response', () => {
             
             })
         
-        await garagePage.profileButton.click()
-        await expect(page.getByText('User Test Mock')).toBeVisible()
+        await garagePage.openProfileTab()
+        await expect(page.getByText(`${USERS_MOCK_JSON.data.name} ${USERS_MOCK_JSON.data.lastName}`)).toBeVisible()
+        await page.pause()
 
         })
 

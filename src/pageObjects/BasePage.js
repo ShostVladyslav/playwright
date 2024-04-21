@@ -1,4 +1,5 @@
 import Header from '../pageObjects/GaragePage/Components/Header.js'
+import SideNavbar from './GaragePage/Components/SideNavbar.js'
 import Main from './HomePage/Components/Main.js'
 
 
@@ -8,6 +9,7 @@ export default class BasePage {
         this._url = url
         this.header = new Header(page)
         this.main = new Main(page)
+        this.sideNavbar = new SideNavbar(page)
     }
 
     get page (){
